@@ -1,17 +1,40 @@
-.body {
-    text-align: center;
+body {
+    color: #333;
+    background-color: #eee;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#header_image {
-    width: 100%;
-}
-
 .custom-navbar {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-size: 1.25rem;
+
   }
 
 .custom-navbar .nav-link {
     padding: 0.75rem 1rem;
+}
+
+.carousel-image {
+    max-height: 500px;
+    width: auto;
+    object-fit: cover;
+}
+
+.content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.content h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.content h4 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content p {
+    text-indent: 40px;
+    font-size: 18px;
 }

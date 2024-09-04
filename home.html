@@ -8,58 +8,140 @@
     <link rel="stylesheet" href="assets/css/home.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-navbar">
-      <div class="container">
-        <div class="mx-auto">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Intro</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-5">
+              <a class="nav-link active" aria-current="page" href="#intro">Intro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Education</a>
+              <a class="nav-link active" aria-current="page" href="#education">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Experience</a>
+              <a class="nav-link active" aria-current="page" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Interests</a>
+              <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
             </li>
           </ul>
+          <span>
+            <form class="d-flex me-5" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </span>
         </div>
       </div>
-    </nav>    
-    <img id="header_image" src="assets/img/fly_cast.png">
+    </nav>
+    <div id="self_photo_slide" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel-inner"></div>
+    </div>
+    <div class="content">
+      <div id="intro">
+        <h1>
+          Who is Julian Krese?
+        </h1>
+        <p>
+          I am Julian Krese! I'm currently a third-year Computer Science Major and Data Science Minor at the Univeristy of Virginia. 
+          Welcome to my site! With applications in full swing, I realized my <a href="assets/docs/Resume - Summer 2024.pdf" target="_blank">resume</a>
+          only truly displayed so much of who I am and what defines me. It does a good job of showing my skills, but doesn't show me.
+          That brings us to this website- I realized it would be a great way to show some very basic web-development skills while
+          serving as a introduction for anyone who visits it. The website itself is made of the classic HTML, CSS, and JavaScript trio,
+          with a little Bootstrap throw in there for some great effects such as the slide carousel above.
+        </p>
+        <h4>
+          So who is Julian Krese besides a random CS student?
+        </h4>
+        <p>
+          Well I'm glad you asked! If you didn't get the memo above, I love the outdoors. Although I love hiking and travel and just 
+          exploring in general, fly fishing takes the cake in terms of my passions. Ever since my dad taught my brother and me as kids, 
+          we've both become advid anglers. It's taken me all over the place; from Maine to Montana to the Bahamas. Beyond fly fishing, 
+          I love to golf and play soccer. I played soccer in high school but now just stick to intramurals. As for golf, I've slowly 
+          been wittling down my handicap and shoot in the mid-to-low 80's, so I can hold my own but there's still lots to work on. So, 
+          Julian Krese is a slightly less random CS student who loves being active and on the water.
+        </p>
+        <h4>
+          So how does a nature lover find his way into a career behind a screen?
+        </h4>
+        <p>
+          It started...
+        </p>
+      </div>
+      <div id="links">
+        Links
+      </div>
+      <div id="education">
+        Education
+      </div>
+      <div id="experience">
+        Experience
+      </div>
+      <div id="projects">
+        Projects
+      </div>
+      <div id="skills">
+        Skills
+      </div>
+    </div>
     <div class="container">
         <footer class="py-3 my-4">
             <ul class="nav nav-underline justify-content-center border-bottom pb-3 mb-3">
               <li>
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Intro </a>
+                <a class="nav-link px-2 text-body-secondary" aria-current="page" href="#intro"> Intro </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Education </a>
+                <a class="nav-link px-2 text-body-secondary" aria-current="page" href="#education"> Education </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Experience </a>
+                <a class="nav-link px-2 text-body-secondary" aria-current="page" href="#experience"> Experience </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Projects </a>
+                <a class="nav-link px-2 text-body-secondary" aria-current="page" href="#projects"> Projects </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Skills </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 text-body-secondary" aria-current="page"> Interests </a>
+                <a class="nav-link px-2 text-body-secondary" aria-current="page" href="#skills"> Skills </a>
               </li>
             </ul>
             <p class="text-center text-body-secondary">© 2024 Julian Krese</p>
       </footer>
     </div>
   </body>
+  <script>
+    // Fetch the list of images from the JSON file for a more dyanmic loading
+    fetch('assets/docs/images.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+      })
+      .then(images => {
+          const carouselInner = document.getElementById('carousel-inner');
+          images.forEach((image, index) => {
+              // Create a carousel item
+              const carouselItem = document.createElement('div');
+              carouselItem.className = 'carousel-item' + (index === 0 ? ' active' : '');
+              carouselItem.setAttribute('data-bs-interval', '6000');
+
+              // Create an image element
+              const imgElement = document.createElement('img');
+              imgElement.src = image;
+              imgElement.className = 'd-block w-100 carousel-image';
+
+              // Append the image to the carousel item
+              carouselItem.appendChild(imgElement);
+              // Append the carousel item to the carousel inner
+              carouselInner.appendChild(carouselItem);
+          });
+      })
+      .catch(error => console.error('Error fetching images:', error));
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
