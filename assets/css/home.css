@@ -55,7 +55,7 @@ body {
 
 .logo:hover {
     height: 165px;
-    width: 165px;
+    width: auto;
     transition: all .4s ease;
 }
 
@@ -66,4 +66,9 @@ body {
 .uva-logo {
     height: 165px;
     width: auto;
+}
+
+.class {
+    font-size: 20px;
+    font-weight: bold;
 }

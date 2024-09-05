@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "Blog",
+      "technologies": "MongoDB, Express, React, Node, Bootstrap",
+      "date": "May - June 2024",
+      "details": [
+        "Developed a MERN blog application that allows users to read and create blogs under authenticated accounts.",
+        "Designed and implemented a comprehensive user interface featuring a secure login and registration page with JWT authentication, home page, categories page, author page, profile page, and blogs page.",
+        "Used Google Cloud Buckets for secure storage."
+      ]
+    },
+    {
+      "name": "Course Enrollment",
+      "technologies": "Java, JavaFX, SQLite",
+      "date": "May 2024",
+      "details": [
+        "Developed a CRUD application that allowed students to see and leave reviews for courses.",
+        "Sections include a login, course search, user-specific reviews, and course-specific reviews."
+      ]
+    },
+    {
+      "name": "Virtual Memory Allocation",
+      "technologies": "C",
+      "date": "March 2024",
+      "details": [
+        "Simulated OS assignment of physical memory to virtual memory.",
+        "Allocated and translated memory into multi-leveled page tables, with a configurable number of levels and size."
+      ]
+    }
+  ]
+}

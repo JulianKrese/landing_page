@@ -1,0 +1,9 @@
+{
+    "Languages": ["C", "C++", "CSS", "HTML", "Java", "JavaScript", "Python", "R", "Unix"],
+    "LibrariesFrameworksOther": [
+      "Bootstrap", "Express", "Git", "Keras", "MongoDB", "Node.js", "NumPy", 
+      "Pandas", "React", "SciKit-Learn", "SQLite", "Django", "Azure", 
+      "Google Cloud Platform", "Web Development", "Mobile App Development"
+    ]
+  }
+  

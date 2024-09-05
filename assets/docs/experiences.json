@@ -1,0 +1,59 @@
+{
+  "experiences": [
+    {
+      "title": "Software Tool Developer",
+      "organization": "Climate Restoration Initiative - Environmental Institute (UVA)",
+      "location": "Charlottesville, Virginia",
+      "start_date": "July 2024",
+      "end_date": "Present",
+      "responsibilities": [
+        "Collaborating with 5 schools at UVA to find economically profitable and sustainable solutions for carbon removal in the commonwealth of Virginia by looking into key geographic features on a county-by-county basis.",
+        "Displaying and modifying GeoJSON files and data through Django and PostgreSQL for analysis."
+      ]
+    },
+    {
+      "title": "Fullstack Software Engineering Intern",
+      "organization": "Karpool",
+      "location": "Cape Town, South Africa",
+      "start_date": "May 2024",
+      "end_date": "June 2024",
+      "responsibilities": [
+        "Built and integrated the payment system for a ride-sharing React-Native app with the Paystack API.",
+        "Enhanced the user interface by implementing the latest Figma-based design updates."
+      ]
+    },
+    {
+      "title": "Software Engineering Student",
+      "organization": "IXperience",
+      "location": "Cape Town, South Africa",
+      "start_date": "May 2024",
+      "end_date": "June 2024",
+      "responsibilities": [
+        "Completed a 6-week software bootcamp taught by industry experts with an emphasis on full-stack development.",
+        "Learned industry-standard tools and skills including but not limited to Bootstrap, React, and Node."
+      ]
+    },
+    {
+      "title": "Undergraduate Teaching Assistant for CS 3100",
+      "organization": "Department of Computer Science (UVA)",
+      "location": "Charlottesville, Virginia",
+      "start_date": "January 2024",
+      "end_date": "Present",
+      "responsibilities": [
+        "Providing help as a Teaching Assistant for Data Structures and Algorithms 2 taught in Python and Java.",
+        "Assisting with students’ understanding of key concepts with an emphasis on algorithms related to Graphs, Divide and Conquer, Greedy, Dynamic Programming, Network Flow, and Machine Learning."
+      ]
+    },
+    {
+      "title": "Undergraduate Teaching Assistant for CS 2100",
+      "organization": "Department of Computer Science (UVA)",
+      "location": "Charlottesville, Virginia",
+      "start_date": "August 2023",
+      "end_date": "Present",
+      "responsibilities": [
+        "Working as a Teaching Assistant for Data Structures and Algorithms 1 taught in Java.",
+        "Assessing and sharpening students’ understanding and ability to implement and use data structures (i.e., trees, heaps, hash maps, etc.) and beginner algorithms (sorting)."
+      ]
+    }
+  ]
+}
