@@ -1,5 +1,4 @@
-{
-  "projects": [
+[
     {
       "name": "Blog",
       "technologies": "MongoDB, Express, React, Node, Bootstrap",
@@ -28,5 +27,4 @@
         "Allocated and translated memory into multi-leveled page tables, with a configurable number of levels and size."
       ]
     }
-  ]
-}
+]

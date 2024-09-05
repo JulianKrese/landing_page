@@ -14,7 +14,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 m-2">
             <li class="nav-item ms-5">
               <a class="nav-link active scroll-adjust" aria-current="page" href="#intro">Intro</a>
             </li>
@@ -38,13 +38,14 @@
       <div class="carousel-inner" id="carousel-inner"></div>
     </div>
     <div class="content">
-      <div id="intro">
+      <div id="intro" class="mt-3">
         <h1>
-          Who is Julian Krese?
+          Who am I?
         </h1>
+        <hr class="sub-hr">
         <p>
-          I am Julian Krese! I'm currently a third-year Computer Science Major and Data Science Minor at the Univeristy of Virginia. 
-          Welcome to my site! With applications in full swing, I realized my <a href="assets/docs/Resume - Summer 2024.pdf" target="_blank">resume</a>
+          My name is Julian Krese and I'm currently a third-year Computer Science Major and Data Science Minor at the Univeristy of Virginia. 
+          Welcome to my site! With applications in full swing, I realized my <a class="clean-href" href="assets/docs/Resume - Summer 2024.pdf" target="_blank">resume</a>
           only truly displayed so much of who I am and what defines me. It does a good job of showing my skills, but doesn't show me.
           That brings us to this website- I realized it would be a great way to show some very basic web-development skills while
           serving as a introduction for anyone who visits it. The website itself is made of the classic HTML, CSS, and JavaScript trio,
@@ -54,7 +55,7 @@
           So who is Julian Krese besides a random Computer Science student?
         </h4>
         <p>
-          Well I'm glad you asked! If you didn't get the memo above, I love the outdoors. Although I love hiking and travel and just 
+          Well, if you didn't get the memo above, I love the outdoors. Although I love hiking and travel and just 
           exploring in general, fly fishing takes the cake in terms of my passions. Ever since my dad taught my brother and me as kids, 
           we've both become advid anglers. It's taken me all over the place; from Maine to Montana to the Bahamas. Beyond fly fishing, 
           I love to golf and play soccer. I played soccer in high school but now just stick to intramurals. As for golf, I've slowly 
@@ -64,7 +65,7 @@
           So how does a outdoorsmen find his way into a career behind a screen?
         </h4>
         <p>
-          Growing up, I always loved building things. Whether just Lego Sets, or duct tape wallets, or cubes out of grocery store 
+          Growing up, I always loved building things. Whether just Lego Sets, duct tape wallets, or cubes out of grocery store 
           twisty-ties, I was always building. My magnum-opus was a ping pong ball dispenser made out of an old cereal box. This love 
           for building was always there, but as I went through school I started to lose touch with it more as it was less present in my 
           life. Luckily, I decided to take in a Computer Science course in highschool, which allowed me to jump back and reconnect 
@@ -97,10 +98,12 @@
           </ul>
         </div>
       </div>
-      <div id="education" class="mt-5">
+      <hr class="main-hr">
+      <div id="education">
         <h1>
           Education
         </h1>
+        <hr class="sub-hr">
         <div class="d-flex align-items-center justify-content-center mb-5">
           <img src="assets/img/logos/UVA_logo.png" alt="UVA's Logo" class="uva-logo me-5">
           <div class="d-flex flex-column ms-5" >
@@ -118,21 +121,39 @@
         </h4>
         <p>
           I completed the <b>IXperience Software Engineering Course</b>, which is a bootcamp and study abroad combo where I travelled 
-          to Cape Town for 6 weeeks. Here, I was taught by an professional software engineer and learned industry-standard full stack development.
+          to Cape Town for 6 weeeks. Here, I was taught by an professional software engineer and learned industry-standard full stack 
+          development. While in Cape Town, I also interned under Karpool, which is a ride-sharing startup. There goal was to make a
+          ride-sharing up that was much more personal and made for group commutes (hence 'Karpool'). The idea is that you connect with
+          a driver on a similar path you need to go down with the same schedule, and then you join them for rides at a small fee. You
+          can view the drivers profile and get to know them much more personally than you would through an app like Uber or Bolt. They
+          had all the planning, but needed to complete the existing code base for the Mobile App. More on this below in the 
+          <a class="scroll-adjust clean-href" aria-current="page" href="#experience">experience</a> section.
         </p>
       </div>
-      <div id="experience" class="mt-5">
+      <hr class="main-hr">
+      <div id="experience">
         <h1>
           Experience
         </h1>
+        <hr class="sub-hr">
+        <div id="experiences-root" class="row row-cols-1 row-cols-md-3 g-4">
+        </div>
       </div>
-      <div id="projects" class="mt-5">
-        Projects
+      <hr class="main-hr">
+      <div id="projects">
+        <h1>
+          Projects
+        </h1>
+        <hr class="sub-hr">
+        <div id="projects-root" class="row row-cols-1 row-cols-md-3 g-4">
+        </div>
       </div>
-      <div id="skills" class="mt-5">
+      <hr class="main-hr">
+      <div id="skills">
         <h1>
           Skills
         </h1>
+        <hr class="sub-hr">
         <h4>
           Languages
         </h4>
@@ -144,10 +165,11 @@
         <ul id="skills-other-list" class="list">
         </ul>
       </div>
+      <hr class="main-hr">
     </div>
     <div class="container">
         <footer class="py-3 my-4">
-            <ul class="nav nav-underline justify-content-center border-bottom pb-3 mb-3">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
               <li>
                 <a class="nav-link px-2 text-body-secondary scroll-adjust" aria-current="page" href="#intro"> Intro </a>
               </li>
@@ -171,99 +193,247 @@
   <script>
 
     // hrefs for correct page alignment
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollLinks = document.querySelectorAll('.scroll-adjust');
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollLinks = document.querySelectorAll(".scroll-adjust");
 
+      // create smooth scrolling with correct page alignment
       scrollLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
+        link.addEventListener("click", function(event) {
           event.preventDefault();
 
-          const targetId = this.getAttribute('href');
+          const targetId = this.getAttribute("href");
           const targetElement = document.querySelector(targetId);
-          const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+
+          // Calculate the offset position
+          const navbarHeight = document.querySelector(".navbar").offsetHeight;
+          const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - (navbarHeight + 10);
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: "smooth"
           });
         });
       });
-
-    // loading json files
-    fetch('assets/docs/images.json')
-      .then(response => {
-          if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-      })
-      .then(images => {
-          const carouselInner = document.getElementById('carousel-inner');
-          images.forEach((image, index) => {
-
-              const carouselItem = document.createElement('div');
-              carouselItem.className = 'carousel-item' + (index === 0 ? ' active' : '');
-              carouselItem.setAttribute('data-bs-interval', '6000');
-
-              const imgElement = document.createElement('img');
-              imgElement.src = image;
-              imgElement.className = 'd-block w-100 carousel-image';
-
-              carouselItem.appendChild(imgElement);
-              carouselInner.appendChild(carouselItem);
-          });
-      })
-      .catch(error => console.error('Error fetching images:', error));
-    
-      function fetchAndDisplayClasses() {
-        fetch("assets/docs/classes.json")
-          .then(response => response.json())
-          .then(data => {
-            const ul = document.getElementById('classes-list');
-
-            data.forEach(item => {
-              const li = document.createElement('li');
-              li.textContent = item;
-              li.setAttribute('class', 'm-4 class');
-              ul.appendChild(li);
-            });
-          })
-          .catch(error => {
-            console.error('Error fetching the JSON file:', error);
-          });
-      }
-      fetchAndDisplayClasses();
-
-      function fetchAndDisplaySkills() {
-        fetch("assets/docs/skills.json")
-          .then(response => response.json())
-          .then(data => {
-            let ul = document.getElementById('skills-languages-list');
-
-            data.Languages.forEach(item => {
-              const li = document.createElement('li');
-              li.textContent = item;
-              li.setAttribute('class', 'm-4 class');
-              ul.appendChild(li);
-            });
-
-            ul = document.getElementById('skills-other-list');
-
-            data.LibrariesFrameworksOther.forEach(item => {
-              const li = document.createElement('li');
-              li.textContent = item;
-              li.setAttribute('class', 'm-4 class');
-              ul.appendChild(li);
-            });
-          })
-          .catch(error => {
-            console.error('Error fetching the JSON file:', error);
-          });
-      }
-      fetchAndDisplaySkills();
-    
     });
 
+    // loading json files scripts
+    async function fetchAndDisplayImages() {
+      try {
+        // get data
+        const response = await fetch("assets/docs/images.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const images = await response.json();
+
+        // create image carousel
+        const carouselInner = document.getElementById("carousel-inner");
+        images.forEach((image, index) => {
+          const carouselItem = document.createElement("div");
+          carouselItem.className = "carousel-item" + (index === 0 ? " active" : "");
+          carouselItem.setAttribute("data-bs-interval", "6000");
+
+          const imgElement = document.createElement("img");
+          imgElement.src = image;
+          imgElement.className = "d-block w-100 carousel-image";
+
+          carouselItem.appendChild(imgElement);
+          carouselInner.appendChild(carouselItem);
+        });
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    }
+
+    async function fetchAndDisplayClasses() {
+      try {
+        // get data
+        const response = await fetch("assets/docs/classes.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        // create classes list
+        const ul = document.getElementById("classes-list");
+        data.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.setAttribute("class", "m-4 class");
+          ul.appendChild(li);
+        });
+      } catch (error) {
+        console.error("Error fetching the JSON file:", error);
+      }
+    }
+
+    async function fetchAndDisplayExperiences() {
+      try {
+        // Fetch data
+        const response = await fetch("assets/docs/experiences.json");
+        const data = await response.json();
+        const experiences = data;
+
+        // Root element
+        const experiencesRoot = document.getElementById("experiences-root");
+
+        experiences.forEach((experience) => {
+          // Outer divs
+          const colDiv = document.createElement("div");
+          colDiv.className = "col";
+          const cardDiv = document.createElement("div");
+          cardDiv.className = "card";
+          const cardBodyDiv = document.createElement("div");
+          cardBodyDiv.className = "card-body";
+
+          // Card header with title and date
+          const cardHeader = document.createElement("div");
+          cardHeader.className = "d-flex justify-content-between align-items-center mb-3"; // Flex container for title and date
+          const cardTitle = document.createElement("h5");
+          cardTitle.className = "card-title fw-bold";
+          cardTitle.textContent = experience.title;
+          const dateSpan = document.createElement("span");
+          dateSpan.className = "text-muted ms-3";
+          dateSpan.textContent = experience.date;
+          cardHeader.appendChild(cardTitle);
+          cardHeader.appendChild(dateSpan);
+
+          const listGroup = document.createElement("ul");
+          listGroup.className = "list-group list-group-flush";
+          
+          // technologies
+          const employeerAndLocationItem = document.createElement("li");
+          employeerAndLocationItem.className = "list-group-item fst-italic";
+          employeerAndLocationItem.textContent = experience.employeer + "in" + experience.location;
+          // details
+          const detailsItem = document.createElement("li");
+          detailsItem.className = "list-group-item";
+          const detailsList = document.createElement("ul");
+          experience.details.forEach(detail => {
+            const detailListItem = document.createElement("li");
+            detailListItem.textContent = detail;
+            detailsList.appendChild(detailListItem);
+          });
+          detailsItem.appendChild(detailsList);
+
+          // Append all
+          listGroup.appendChild(detailsItem);
+          cardBodyDiv.appendChild(cardHeader);
+          cardBodyDiv.appendChild(listGroup);
+          cardDiv.appendChild(cardBodyDiv);
+          colDiv.appendChild(cardDiv);
+
+          experiencesRoot.appendChild(colDiv);
+        });
+      } catch (error) {
+        console.error("Error fetching or parsing experiences.json:", error);
+      }
+    }
+
+    async function fetchAndDisplayProjects() {
+      try {
+        // Fetch data
+        const response = await fetch("assets/docs/projects.json");
+        const data = await response.json();
+        const projects = data;
+
+        // Root element
+        const projectsRoot = document.getElementById("projects-root");
+
+        projects.forEach((project) => {
+          // Outer divs
+          const colDiv = document.createElement("div");
+          colDiv.className = "col";
+          const cardDiv = document.createElement("div");
+          cardDiv.className = "card";
+          const cardBodyDiv = document.createElement("div");
+          cardBodyDiv.className = "card-body";
+
+          // Card header with title and date
+          const cardHeader = document.createElement("div");
+          cardHeader.className = "d-flex justify-content-between align-items-center mb-3"; // Flex container for title and date
+          const cardTitle = document.createElement("h5");
+          cardTitle.className = "card-title fw-bold";
+          cardTitle.textContent = project.name;
+          const dateSpan = document.createElement("span");
+          dateSpan.className = "text-muted ms-3";
+          dateSpan.textContent = project.date;
+          cardHeader.appendChild(cardTitle);
+          cardHeader.appendChild(dateSpan);
+
+          const listGroup = document.createElement("ul");
+          listGroup.className = "list-group list-group-flush";
+          
+          // technologies
+          const technologiesItem = document.createElement("li");
+          technologiesItem.className = "list-group-item fst-italic";
+          technologiesItem.textContent = project.technologies;
+          // details
+          const detailsItem = document.createElement("li");
+          detailsItem.className = "list-group-item";
+          const detailsList = document.createElement("ul");
+          project.details.forEach(detail => {
+            const detailListItem = document.createElement("li");
+            detailListItem.textContent = detail;
+            detailsList.appendChild(detailListItem);
+          });
+          detailsItem.appendChild(detailsList);
+
+          // Append all
+          listGroup.appendChild(technologiesItem);
+          listGroup.appendChild(detailsItem);
+          cardBodyDiv.appendChild(cardHeader);
+          cardBodyDiv.appendChild(listGroup);
+          cardDiv.appendChild(cardBodyDiv);
+          colDiv.appendChild(cardDiv);
+
+          projectsRoot.appendChild(colDiv);
+        });
+      } catch (error) {
+        console.error("Error fetching or parsing projects.json:", error);
+      }
+    }
+
+    async function fetchAndDisplaySkills() {
+      try {
+        // get data
+        const response = await fetch("assets/docs/skills.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        // build skills 'languages' list
+        let ul = document.getElementById("skills-languages-list");
+        data.Languages.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.setAttribute("class", "m-4 class");
+          ul.appendChild(li);
+        });
+
+        // build skills 'others' list
+        ul = document.getElementById("skills-other-list");
+        data.LibrariesFrameworksOther.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.setAttribute("class", "m-4 class");
+          ul.appendChild(li);
+        });
+      } catch (error) {
+        console.error("Error fetching the JSON file:", error);
+      }
+    }
+
+    // actually load json files
+    function callFetchAndDisplayAll() {
+      fetchAndDisplayImages();
+      fetchAndDisplayClasses();
+      fetchAndDisplayExperiences();
+      fetchAndDisplayProjects();
+      fetchAndDisplaySkills();
+    }
+    callFetchAndDisplayAll();
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

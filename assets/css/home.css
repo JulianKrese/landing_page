@@ -27,7 +27,6 @@ body {
 
 .content h1 {
     text-align: center;
-    margin: 20px;
 }
 .content h4 {
     text-align: center;
@@ -71,4 +70,19 @@ body {
 .class {
     font-size: 20px;
     font-weight: bold;
+}
+
+.main-hr {
+    margin-top: 100px;
+}
+
+.sub-hr {
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.clean-href {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
 }
