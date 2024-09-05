@@ -27,14 +27,43 @@ body {
 
 .content h1 {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px;
 }
 .content h4 {
     text-align: center;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .content p {
     text-indent: 40px;
     font-size: 18px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    margin: 20px 80px 20px 80px;
+    color: blue
+}
+
+.logo:hover {
+    height: 165px;
+    width: 165px;
+    transition: all .4s ease;
+}
+
+.education {
+    vertical-align: baseline;
+}
+
+.uva-logo {
+    height: 165px;
+    width: auto;
 }

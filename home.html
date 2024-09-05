@@ -16,23 +16,23 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ms-5">
-              <a class="nav-link active" aria-current="page" href="#intro">Intro</a>
+              <a class="nav-link active scroll-adjust" aria-current="page" href="#intro">Intro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#education">Education</a>
+              <a class="nav-link active scroll-adjust" aria-current="page" href="#education">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#experience">Experience</a>
+              <a class="nav-link active scroll-adjust" aria-current="page" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
+              <a class="nav-link active scroll-adjust" aria-current="page" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
+              <a class="nav-link active scroll-adjust" aria-current="page" href="#skills">Skills</a>
             </li>
           </ul>
           <span>
-            <form class="d-flex me-5" role="search">
+            <form class="d-flex me-5" role="search" onsubmit="performSearch(event)">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
@@ -57,28 +57,67 @@
           with a little Bootstrap throw in there for some great effects such as the slide carousel above.
         </p>
         <h4>
-          So who is Julian Krese besides a random CS student?
+          So who is Julian Krese besides a random Computer Science student?
         </h4>
         <p>
           Well I'm glad you asked! If you didn't get the memo above, I love the outdoors. Although I love hiking and travel and just 
           exploring in general, fly fishing takes the cake in terms of my passions. Ever since my dad taught my brother and me as kids, 
           we've both become advid anglers. It's taken me all over the place; from Maine to Montana to the Bahamas. Beyond fly fishing, 
           I love to golf and play soccer. I played soccer in high school but now just stick to intramurals. As for golf, I've slowly 
-          been wittling down my handicap and shoot in the mid-to-low 80's, so I can hold my own but there's still lots to work on. So, 
-          Julian Krese is a slightly less random CS student who loves being active and on the water.
+          been wittling down my handicap and shoot in the mid-to-low 80's, so I can hold my own but there's still lots to work on.
         </p>
         <h4>
-          So how does a nature lover find his way into a career behind a screen?
+          So how does a outdoorsmen find his way into a career behind a screen?
         </h4>
         <p>
-          It started...
+          Growing up, I always loved building things. Whether just Lego Sets, or duct tape wallets, or cubes out of grocery store 
+          twisty-ties, I was always building. My magnum-opus was a ping pong ball dispenser made out of an old cereal box. This love 
+          for building was always there, but as I went through school I started to lose touch with it more as it was less present in my 
+          life. Luckily, I decided to take in a Computer Science course in highschool, which allowed me to jump back and reconnect 
+          with my inner child, switching from the physical world to the digital world. Because of this class, I enrolled in a Intro 
+          Computer SCience course, where I learned the basics of programming and got to build a game through PyGame. This class helped 
+          me confirm Computer Science was the route I wanted to go down. Now, I'm trying to turn my love of coding into a professional 
+          career.
         </p>
       </div>
       <div id="links">
-        Links
+        <h4>
+          Some places you can find me are...
+        </h4>
+        <div>
+          <ul class="list">
+            <li>
+              <a href="https://www.linkedin.com/in/julian-krese/" target="_blank">
+                <img src="assets/img/logos/linkedin_logo.png" alt="LinkedIn's logo" class="logo"/>
+              </a> 
+            <li>
+              <a href="https://github.com/JulianKrese" target="_blank">
+                <img src="assets/img/logos/github_logo.png" alt="GitHub's logo" class="logo"/>
+              </a> 
+            </li>
+            <li>
+              <a href="https://www.instagram.com/jkrese/" target="_blank">
+                <img src="assets/img/logos/instagram_logo.png" alt="Instagrams's logo" class="logo"/>
+              </a> 
+            </li>
+          </ul>
+        </div>
       </div>
       <div id="education">
-        Education
+        <h1>
+          Education
+        </h1>
+        <div class="d-flex justify-content-center education">
+          <img src="assets/img/logos/UVA_logo.png" alt="UVA's Logo" class="uva-logo">
+          <h3>
+            GPA: 
+          </h3>
+        </div>
+        <h4>
+          Relevant Coursework
+        </h4>
+        <ul class="list">
+        </ul>
       </div>
       <div id="experience">
         Experience
@@ -142,6 +181,26 @@
           });
       })
       .catch(error => console.error('Error fetching images:', error));
+
+    // smooth scrolling and adjusted href positioning with the fixed navbar
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollLinks = document.querySelectorAll('.scroll-adjust');
+
+      scrollLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
