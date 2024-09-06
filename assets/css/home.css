@@ -15,7 +15,7 @@ body {
 }
 
 .carousel-image {
-    max-height: 500px;
+    height: 60vh;
     width: auto;
     object-fit: cover;
 }
