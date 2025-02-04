@@ -1,5 +1,14 @@
 [
     {
+      "name": "Compiler",
+      "technologies": "ANTLR, C++, LLVM",
+      "date": "September - December 2024",
+      "details": [
+        "Fully extended the SIP language to TIP, a statically typed, imperative, and polymorphic language, including phases of parsing with ANTLR, semantic analyses, and code generation and optimizations with the LLVM IR.",
+        "Added over 3,300 LOC and 358 lines of comments across 37 new files to the existing code base with 10,000 LOC"
+      ]
+    },
+    {
       "name": "Blog",
       "technologies": "MongoDB, Express, React, Node, Bootstrap",
       "date": "May - June 2024",

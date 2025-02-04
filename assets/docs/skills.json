@@ -1,5 +1,5 @@
 {
-    "Languages": ["C", "C++", "CSS", "HTML", "Java", "JavaScript", "Python", "R", "Unix"],
+    "Languages": ["C", "C++", "CSS", "HTML", "Java", "JavaScript", "LLVM", "Python", "R"],
     "LibrariesFrameworksOther": [
       "Bootstrap", "Express", "Git", "Keras", "MongoDB", "Node.js", "NumPy", 
       "Pandas", "React", "SciKit-Learn", "SQLite", "Django", "Azure", 
